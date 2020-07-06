@@ -1,22 +1,20 @@
 # --- Basic options --- #
 
 # Name of website
-title: My website
+title: Welcome!
 
 # Short description of your site
-description: A virtual proof that I'm awesome
+description: Jacob's Personal Blog and Portfolio
 
 # Your name to show in the footer
-author: Some Person
+author: Jacob Richey
 
 # --- List of links in the navigation bar --- #
 
 navbar-links:
+  Home: "https://jacobrichey.com"
   About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  Projects: "projects"
 
 # --- Logo --- #
 
