@@ -14,8 +14,7 @@ author: Jacob Richey
 navbar-links:
   Home: "https://jacobrichey.github.io"
   About Me: "aboutme"
-  Projects: "projects"
-
+  
 # --- Logo --- #
 
 # Image to show in the navigation bar - works best with a square image
