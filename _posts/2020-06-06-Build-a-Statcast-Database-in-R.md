@@ -57,8 +57,8 @@ scrape_statcast <- function(season) {
 }
 ```
 
-
-
+ 
+ 
 ## Format Statcast Data
 The following can be condensed into a single formatting function called `format_statcast()`, but will be broken up here to explain more thoroughly. Refer to the full [GitHub code](https://github.com/jacobrichey/statcast-database/blob/master/statcast_database.R) if clarity is needed on writing the following as a single function. Let `df` denote the input season-worth of data when the function is called. 
 
