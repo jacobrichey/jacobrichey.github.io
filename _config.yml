@@ -4,7 +4,7 @@
 title: Jacob Richey
 
 # Short description of your site
-description: Jacob's Personal Blog and Portfolio
+description: Data Science and Econometrics Student at UPenn
 
 # Your name to show in the footer
 author: Jacob Richey
@@ -26,7 +26,7 @@ round-avatar: true
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
-title-img: /path/to/image
+title-img: "/assets/img/hawaii_square.jpeg"
 
 
 # --- Footer options --- #
