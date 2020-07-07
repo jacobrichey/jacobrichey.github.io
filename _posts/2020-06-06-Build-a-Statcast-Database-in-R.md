@@ -3,12 +3,64 @@ layout: post
 title: Build a Statcast Database in R
 gh-repo: jacobrichey/statcast-database
 gh-badge: [star]
-tags: [R, baseball]
+tags: [R, baseball, data cleaning]
 ---
 
-The following is a set of instructions to build a comprehensive MLB Statcast database includiing play-by-play data and statistics such as pitch tracking, exit velocity, and launch angle. Bill Petti's scraping functions from the `baseballr` R package are used to scrape data from Baseball Savant. 
+The following is a set of instructions to build and format a comprehensive MLB Statcast database including play-by-play data and statistics such as pitch tracking, exit velocity, and launch angle. Bill Petti's [scraping functions](https://billpetti.github.io/2020-05-26-build-statcast-database-rstats-version-2.0/) from the `baseballr` R package are used to source data from Baseball Savant. Full R code is located on GitHub.
 
-The [documentation](#statcast-documentation) can be found at the bottom of the page. 
+The [documentation](#statcast-documentation) can be found at the end of the post. 
+
+## Download Statcast Data
+Scrape the online Baseball Savant play-by-play data for the specified season. This should take ~10 minutes per call.
+```
+library(baseballr)
+library(tidyverse)
+
+scrape_statcast <- function(season) {
+  
+  # create weeks of dates for season from mar - nov
+  # includes spring training + postseason
+  dates <- seq.Date(as.Date(paste0(season, '-03-01')),
+                    as.Date(paste0(season, '-12-01')), by = 'week')
+  
+  date_grid <- tibble(start_date = dates, 
+                      end_date = dates + 6)
+  
+  # create 'safe' version of scrape_statcast_savant in case week doesn't process
+  safe_savant <- safely(scrape_statcast_savant)
+  
+  # loop over each row of date_grid, and collect each week in a df
+  payload <- map(.x = seq_along(date_grid$start_date), 
+                 ~{message(paste0('\nScraping week of ', date_grid$start_date[.x], '...\n'))
+                   
+                   payload <- safe_savant(start_date = date_grid$start_date[.x], 
+                                          end_date = date_grid$end_date[.x], type = 'pitcher')
+                   
+                   return(payload)
+                 })
+  
+  payload_df <- map(payload, 'result')
+  
+  # eliminate results with an empty dataframe
+  number_rows <- map_df(.x = seq_along(payload_df), 
+                        ~{number_rows <- tibble(week = .x, 
+                                                number_rows = length(payload_df[[.x]]$game_date))}) %>%
+    filter(number_rows > 0) %>%
+    pull(week)
+  
+  payload_df_reduced <- payload_df[number_rows]
+  
+  combined <- payload_df_reduced %>%
+    bind_rows()
+  
+  return(combined)
+}
+```
+
+## Format Statcast Data
+The following can be condensed into a single formatting function called `format_statcast()`, but will be broken up here to explain more thoroughly. Refer to the full [GitHub code](https://github.com/jacobrichey/statcast-database/blob/master/statcast_database.R) if clarity is needed on writing the following as a single function. Let `df` denote the input season-worth of data when the function is called. 
+
+ First, we need to modidy and standardize some of the pre-existing data. 
 
 ## Statcast Documentation
 ###### Data sourced from Baseball Savant.
