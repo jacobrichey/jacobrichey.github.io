@@ -63,15 +63,17 @@ The following can be condensed into a single formatting function called `format_
  First, we need to modidy and standardize some of the pre-existing data. 
 
 ## Statcast Documentation
-###### Data sourced from Baseball Savant.
+
+_Data sourced from Baseball Savant_
+
 #### Plate Appearance Information
-gameid - mlbam gameid\
-game_year – year\
-game_date – date of the game
-game_type - type of game (e.g. Regular Season, World Series, etc.)\
-home_team – home team\
-vis_team – visiting team\
-pa_number – game pa number\
+gameid - mlbam gameid  
+game_year – year  
+game_date – date of the game  
+game_type - type of game (e.g. Regular Season, World Series, etc.)  
+home_team – home team  
+vis_team – visiting team  
+pa_number – game pa number  
 pitch_number - total pitch number of the plate appearance\
 inning\
 is_bottom\
