@@ -3,7 +3,7 @@ layout: post
 title: Build a Statcast Database in R
 gh-repo: jacobrichey/statcast-database
 gh-badge: [star]
-tags: [R, baseball, data cleaning]
+tags: [R, baseball]
 ---
 
 The following is a set of instructions to build and format a comprehensive MLB Statcast database including play-by-play data and statistics such as pitch tracking, exit velocity, and launch angle. Bill Petti's [scraping functions](https://billpetti.github.io/2020-05-26-build-statcast-database-rstats-version-2.0/) from the `baseballr` R package are used to source data from Baseball Savant. Full R code is located on GitHub.
