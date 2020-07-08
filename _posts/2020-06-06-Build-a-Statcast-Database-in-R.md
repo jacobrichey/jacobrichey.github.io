@@ -315,8 +315,9 @@ Ta-da. Now, repeat for all years 2008-2019 desired. Documentation is below.
 _Data sourced from Baseball Savant_
 
 #### Plate Appearance Information
-gameid - mlbam gameid  
-game_year – year  
+
+- gameid - mlbam gameid  
+- game_year – year  
 game_date – date of the game  
 game_type - type of game (e.g. Regular Season, World Series, etc.)  
 home_team – home team  
