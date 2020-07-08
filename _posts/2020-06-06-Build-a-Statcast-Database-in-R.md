@@ -59,7 +59,7 @@ scrape_statcast <- function(season) {
 This should take ~10 minutes per call.
  
 ## Format Statcast Data
-The following can be condensed into a single formatting function called `format_statcast()`, but will be broken up here to explain more thoroughly. Refer to the full [GitHub code](https://github.com/jacobrichey/statcast-database/blob/master/statcast_database.R) if clarity is needed, or if you'd like to download the code in it's entirety. Let $$df$$ denote the input season-worth of data when the function is called. 
+The following can be condensed into a single formatting function called `format_statcast()`, but will be broken up here to explain more thoroughly. Refer to the full [GitHub code](https://github.com/jacobrichey/statcast-database/blob/master/statcast_database.R) if clarity is needed, or if you'd like to download the code in it's entirety. Let "df" denote the input season-worth of data when the function is called. 
 
  First, we need to modify and standardize some of the pre-existing data. 
  ```
@@ -296,7 +296,7 @@ We'll also add some information about the location of the pitch, like the attack
            of_fielding_alignment)
 ```
 
-If you're following along and creating one large function, now would be a good time to return $$df$$. 
+If you're following along and creating one large function, now would be a good time to return "df". 
 
 ## 2019 Example
 
