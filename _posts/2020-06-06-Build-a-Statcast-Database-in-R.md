@@ -142,9 +142,13 @@ The following can be condensed into a single formatting function called `format_
 ```
 
 Here we're going to fix a couple issues with our source data. Some of the pitch number counts are incorrect, which in turn causes the ball and strike counts to be wrong. We'll re-calculate those values ourselves to correct them. Likewise, sometimes the PA number is not updated, leading to errors such as 7 ball counts. We'll fix this too. Finally, the batting team's score after the PA is always equal to the score before the PA. So, we'll re-calculate bat_score_after as well.  
-We'll also add player names, because who knows who has batter id 545361 (it's Mike Trout, if you're wondering).
+We'll also add player names, because who knows who has batter id 545361 (it's Mike Trout, if you're wondering). These are sourced from the Chadwick Bureau. Latest version can always be found on it's [GitHub](https://github.com/chadwickbureau/register). Note, you should load the csv outside of the formatting function. 
 
 ```
+  register <- read_csv("chadwick_register.csv") %>%
+    filter(!is.na(key_mlbam)) %>%
+    mutate(name = paste(name_first, name_last))
+  
   df <- df %>%
     # correct pitch numbering, ball, and strike counts
     group_by(gameid, pa_number, batterid) %>%
