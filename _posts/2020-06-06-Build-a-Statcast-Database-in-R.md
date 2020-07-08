@@ -318,28 +318,29 @@ _Data sourced from Baseball Savant_
 
 - gameid - mlbam gameid  
 - game_year – year  
-game_date – date of the game  
-game_type - type of game (e.g. Regular Season, World Series, etc.)  
-home_team – home team  
-vis_team – visiting team  
-pa_number – game pa number  
-pitch_number - total pitch number of the plate appearance  
-inning  
-is_bottom  
-batterid – mlbam batter id  
-batter_name  
-is_lhb – is left handed batter  
-pitcherid – mlbam pitcher id  
-pitcher_name  
-is_lhp – is left handed pitcher  
-bat_score_before – score of batting team before plate appearance event  
-bat_score_after – score of batting team after plate appearance event  
-field_score – field team score during batting event  
-baseout_state_before – basecode and outs before plate appearance event (e.g. 010 1 = runner on 2nd, one out)  
-baseout_state_after – basecode and outs after plate appearance event (e.g. 001 2 = runner on 3rd, two outs)  
-event_type - resulting event of plate appearance  
-event_description - plate appearance description from game day  
-pitch_description - description of resulting pitch
+- game_date – date of the game  
+- game_type - type of game (e.g. Regular Season, World Series, etc.)  
+- home_team – home team  
+- vis_team – visiting team  
+- pa_number – game pa number  
+- pitch_number - total pitch number of the plate appearance  
+- inning  
+- is_bottom  
+- batterid – mlbam batter id  
+- batter_name  
+- is_lhb – is left handed batter  
+- pitcherid – mlbam pitcher id  
+- pitcher_name  
+- is_lhp – is left handed pitcher  
+- bat_score_before – score of batting team before plate appearance event  
+- bat_score_after – score of batting team after plate appearance event  
+- field_score – field team score during batting event  
+- baseout_state_before – basecode and outs before plate appearance event (e.g. 010 1 = runner on 2nd, one out)  
+- baseout_state_after – basecode and outs after plate appearance event (e.g. 001 2 = runner on 3rd, two outs)  
+- event_type - resulting event of plate appearance  
+- event_description - plate appearance description from game day  
+- pitch_description - description of resulting pitch
+
 #### Pitch Details
 balls – balls when pitch was thrown  
 strikes – strikes when pitch was thrown  
