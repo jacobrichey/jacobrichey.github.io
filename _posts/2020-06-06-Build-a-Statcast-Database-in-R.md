@@ -59,9 +59,9 @@ scrape_statcast <- function(season) {
 This should take ~10 minutes per call.
  
 ## Format Statcast Data
-The following can be condensed into a single formatting function called `format_statcast()`, but will be broken up here to explain more thoroughly. Refer to the full [GitHub code](https://github.com/jacobrichey/statcast-database/blob/master/statcast_database.R) if clarity is needed on writing the following as a single function. Let `df` denote the input season-worth of data when the function is called. 
+The following can be condensed into a single formatting function called `format_statcast()`, but will be broken up here to explain more thoroughly. Refer to the full [GitHub code](https://github.com/jacobrichey/statcast-database/blob/master/statcast_database.R) if clarity is needed, or if you'd like to download the code in it's entirety. Let $$df$$ denote the input season-worth of data when the function is called. 
 
- First, we need to modidy and standardize some of the pre-existing data. 
+ First, we need to modify and standardize some of the pre-existing data. 
  ```
   df <- df %>%
     mutate(pitch_type = ifelse(pitch_type == "", "UN", pitch_type),
@@ -141,8 +141,8 @@ The following can be condensed into a single formatting function called `format_
     arrange(game_date, gameid, pa_number, pitch_number)
 ```
 
-Here we're going to fix a couple issues with our source data. Some of the pitch number counts are incorrect, which in turn causes the ball and strike counts to be wrong. We'll re-calculate those values ourselves to correct them. Likewise, sometimes the PA number is not updated, leading to errors such as 7 ball counts. We'll fix this too. Finally, the batting team's score after the PA is always equal to the score before the PA. So, we'll re-calculate bat_score_after as well.  
-We'll also add player names, because who knows who has batter id 545361 (it's Mike Trout, if you're wondering). These are sourced from the Chadwick Bureau. Latest version can always be found on it's [GitHub](https://github.com/chadwickbureau/register). Note, you should load the csv outside of the formatting function. 
+Here we're going to fix a couple issues with our source data. Some of the pitch number counts are incorrect, which in turn causes the ball and strike counts to be wrong. We'll re-calculate those values. Likewise, sometimes the PA number is not updated, leading to errors such as 7 ball counts. Finally, the batting team's score after the PA is always equal to the score before the PA. So, we'll re-calculate bat_score_after as well.  
+We'll also add player names, because who knows what batter id 545361 means (that's Mike Trout, if you're wondering). These are sourced from the Chadwick Bureau. Latest version can always be found on [GitHub](https://github.com/chadwickbureau/register). Note, you should load the csv outside of the formatting function. 
 
 ```
   register <- read_csv("chadwick_register.csv") %>%
@@ -194,7 +194,7 @@ We'll also add player names, because who knows who has batter id 545361 (it's Mi
     arrange(game_date, gameid, pa_number, pitch_number)
 ```
 
-Next, we'll calculate run expectancy for the season, given base-out state and base-out-count state individually. See [this article](http://tangotiger.com/index.php/site/article/statcast-lab-swing-take-and-a-primer-on-run-value) for more information on these statistics. 
+Next, we'll calculate run expectancy for the season, given base-out state and base-out-count state individually. See [this article](http://tangotiger.com/index.php/site/article/statcast-lab-swing-take-and-a-primer-on-run-value) for more information on those statistics. 
 
 ```
   re24 <- df %>%
@@ -296,11 +296,11 @@ We'll also add some information about the location of the pitch, like the attack
            of_fielding_alignment)
 ```
 
-If you're following along and creating one large function, now would be a good time to return `df`. 
+If you're following along and creating one large function, now would be a good time to return $$df$$. 
 
 ## 2019 Example
 
-Let's now scrape and format all 2019 Statcast data! Note I've labeled the previous function `format_statcast()`. We'll also save this data frame as a csv, so we don't have to repeat this process again.
+Let's now scrape and format all 2019 Statcast data. Note I've labeled the previous function `format_statcast()`. We'll also save this data frame as a csv, so we don't have to repeat this process again.
 
 ```
 payload_statcast <- scrape_statcast(2019)
@@ -308,7 +308,7 @@ statcast_2019 <- format_statcast(payload_statcast)
 write.csv(statcast_2019, "statcast_2019.csv", row.names = FALSE)
 ```
 
-Ta-da. Now, repeat for all years 2008-2019 desired. Documentation is below.
+Ta-da. Now, repeat for all years 2008-2018 desired. Documentation is below.
 
 ## Statcast Documentation
 
