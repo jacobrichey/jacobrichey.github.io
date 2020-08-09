@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About me
-subtitle: Jacob Richey, Data Science and Econometrics Student at UPenn
+subtitle: Jacob Richey, Data Science Student at UPenn
 ---
 
 Hi there! My name is Jacob Richey. I grew up in Seattle, Washington, and now find myself across the country in my senior year at the University of Pennsylvania in Philadelphia. I'm studying Economics (in *The College of Arts and Sciences*), with a focus on Econometrics, and minoring in Data Science (*Penn Engineering*) and Statistics (*The Wharton School*). Classes I'm particularly excited for this fall include Modern Regression (STAT 474), Big Data Analytics (CIS 545), the Culture of Technology (MGMT 265), and Urban Education (URBS 202). 
