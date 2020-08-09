@@ -12,6 +12,9 @@ I really enjoy learning from the statistics community on Twitter. Some of my fav
 > "A little learning is a dangerous thing; Drink deep, or taste not the Pierian spring."
 > - Alexander Pope
 
+> Coffee. The finest organic suspension ever devised... I beat the Borg with it.
+> - Captain Janeway
+
 Excellent.
 
 This past quarantined summer, I originally planned to work for the New York Mets in player development at their spring training site in Florida. Faced instead with an unexpectadly large amount of free time on my hands, I committed myself to a summer of learning. I used my strong background in R to become proficient in complementary, data-oriented languages such as Python and SQL, while letting my love for food and nutrition science to fuel a newfound passion for cooking.  
