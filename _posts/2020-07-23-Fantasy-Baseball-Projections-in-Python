@@ -1,0 +1,10 @@
+---
+layout: post
+title: Fantasy Baseball Projections in Python
+subtitle: 2020 Shortened Season
+gh-repo: jacobrichey/playerElo_2019
+gh-badge: [star]
+tags: [R, baseball]
+---
+
+Well, the 2020 MLB Season has finally arrived, roughly four months after the previously scheduled start date. In advance of Opening Day tonight, I'm going to share my fantasy baseball player rankings, and the methodology behind the system. Note the rankings are designed for a snake draft (no auction values) in an ESPN 
