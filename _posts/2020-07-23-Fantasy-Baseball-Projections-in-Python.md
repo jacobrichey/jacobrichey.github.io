@@ -4,7 +4,7 @@ title: Fantasy Baseball Projections in Python
 subtitle: 2020 Shortened Season
 gh-repo: jacobrichey/Fantasy-Baseball
 gh-badge: [star]
-tags: [R, baseball]
+tags: [Python, baseball]
 ---
 
 Well, the 2020 MLB Season has finally arrived, roughly four months after the previously scheduled start date. In advance of Opening Day tonight, I'm going to share my fantasy baseball player rankings, and the methodology behind the system. Note these rankings are designed for a snake draft (no auction values) in an ESPN Head-to-Head Categories league with a standard scoring system. These rankings are for fantasy baseball, and do not reflect overall player value. The general approach is to ensemble nine reputable projection systems to produce a consensus player ranking. The sample skewness for player projections is used to add potential boom/bust notes for players. All links to projections can be found in Jupyter Notebook write up of this project, located in the GitHub repository linked above.
@@ -115,7 +115,5 @@ all_batters = (pd.concat([atc_batters, fgdc_batters, steamer_batters,
                # drop Mancini, Desmond, Zimmerman, Cain, Smith (players who have opted out)
                .drop(['15149', '6885', '4220', '9077', '8048']))
 ```
-
-
 
 
