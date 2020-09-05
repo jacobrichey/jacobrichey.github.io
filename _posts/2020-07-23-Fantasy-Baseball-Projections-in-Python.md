@@ -7,7 +7,7 @@ gh-badge: [star]
 tags: [R, baseball]
 ---
 
-Well, the 2020 MLB Season has finally arrived, roughly four months after the previously scheduled start date. In advance of Opening Day tonight, I'm going to share my fantasy baseball player rankings, and the methodology behind the system. Note these rankings are designed for a snake draft (no auction values) in an ESPN Head-to-Head Categories league with a standard scoring system. These rankings are for fantasy baseball, and do not reflect overall player value. The general approach is to ensemble nine reputable projection systems to produce a consensus player ranking. The sample skewness for player projections is used to add potential boom/bust notes for players. 
+Well, the 2020 MLB Season has finally arrived, roughly four months after the previously scheduled start date. In advance of Opening Day tonight, I'm going to share my fantasy baseball player rankings, and the methodology behind the system. Note these rankings are designed for a snake draft (no auction values) in an ESPN Head-to-Head Categories league with a standard scoring system. These rankings are for fantasy baseball, and do not reflect overall player value. The general approach is to ensemble nine reputable projection systems to produce a consensus player ranking. The sample skewness for player projections is used to add potential boom/bust notes for players. All links to projections can be found in Jupyter Notebook write up of this project, located in the GitHub repository linked above.
 
 First, we'll need to import the necessary modules. 
 
@@ -19,12 +19,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import zscore, skew
 ```
 
-We'll now begin the ardous process of reading in the various hitter projections. We will want to be able to merge projection systems and historical performance statisticsw based on player id's over player names, to ensure accuracy. However, many sites have their own id conventions, so we will need a method to convert between id mappings. The Chadwick Register will be used to provide these conversions, with the extensive Steamer Projections providing official player naming conventions.
-
-[Steamer Hitter Projections](https://www.fangraphs.com/projections.aspx?pos=all&stats=bat&type=steamer&team=0&lg=all&players=0) -> 'Export Data'  
-[Steamer Pitcher Projections](https://www.fangraphs.com/projections.aspx?pos=all&stats=pit&type=steamer&team=0&lg=all&players=0) -> 'Export Data'
-
-[people.csv (Chadwick Register)](https://github.com/chadwickbureau/register) -> 'data' -> 'people.csv' -> 'Download'
+We'll now begin the ardous process of reading in the various hitter projections. We will want to be able to merge projection systems and historical performance statisticsw based on player id's over player names, to ensure accuracy. However, many sites have their own id conventions, so we will need a method to convert between id mappings. The Chadwick Register will be used to provide these conversions, with the extensive Steamer Projections providing official player naming conventions. 
 
 ```
 names = pd.concat([
