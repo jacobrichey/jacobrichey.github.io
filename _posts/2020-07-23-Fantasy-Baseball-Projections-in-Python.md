@@ -2,7 +2,7 @@
 layout: post
 title: Fantasy Baseball Projections in Python
 subtitle: 2020 Shortened Season
-gh-repo: jacobrichey/playerElo_2019
+gh-repo: jacobrichey/Fantasy-Baseball
 gh-badge: [star]
 tags: [R, baseball]
 ---
