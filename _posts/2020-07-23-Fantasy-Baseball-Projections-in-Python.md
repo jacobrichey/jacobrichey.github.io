@@ -167,13 +167,13 @@ notes = pd.Series(np.select(conditions, values), index = proj_skew.index)
 
 Let's look at three top fantasy players for example. First, consider Cody Bellinger's stable projection. His player rating across systems, shown below, is unimodal and clustered around 10. We feel fairly comfortable concluding Bellinger will likely perform close to this mark. The blue line gives the average player rating, with the red line giving the median.
 
-![Bellinger](assets/img/Bellinger_distribution.png)
+![Bellinger](https://github.com/jacobrichey/jacobrichey.github.io/blob/master/assets/img/Bellinger_distribution.png)
 
 Now, let's look at Acuna (a medium upside player) and Ramirez (a low risk player). Note the graphs appear in that order. Here, we see two bimodal distributions: Acuna with some upside (one system thinks he will be an MVP level player), and Ramirez with some downside. 
 
-![Acuna](assets/img/Acuna_distribution.png)
+![Acuna](https://github.com/jacobrichey/jacobrichey.github.io/blob/master/assets/img/Acuna_distribution.png)
 
-![Ramirez](assets/img/Ramirez_distribution.png)
+![Ramirez](https://github.com/jacobrichey/jacobrichey.github.io/blob/master/assets/img/Ramirez_distribution.png)
 
 We'll import in some stats from 2019, specifically context neutral run value and xwOBA, and add them into the final sheet. See the GitHub repository for full code and necessary data. We'll also merge in player positions from ESPN, as well as their average draft pick. Finally, the summary stats will be re-computed for accuracy. And there we have it, our final sheet! 
 
