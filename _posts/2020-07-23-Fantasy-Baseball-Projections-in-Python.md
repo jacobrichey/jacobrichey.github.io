@@ -165,8 +165,12 @@ values = ['High Risk', 'Med Risk', 'Low Risk', 'Stable', 'Not Enough Data',
 notes = pd.Series(np.select(conditions, values), index = proj_skew.index)
 ```
 
-For example, consider Cody Bellinger's stable projection. His Rating is unimodal and clustered around 10. We feel fairly comfortable concluding Bellinger will likely perform close to this mark. The blue line gives the average player rating, with the red line giving the median.
+Let's look at three top fantasy players for example. First, consider Cody Bellinger's stable projection. His player rating across systems, shown below, is unimodal and clustered around 10. We feel fairly comfortable concluding Bellinger will likely perform close to this mark. The blue line gives the average player rating, with the red line giving the median.
 
-![Bellinger](https://github.com/jacobrichey/jacobrichey.github.io/blob/master/assets/img/Acuna_distribution)
+![Bellinger](https://github.com/jacobrichey/jacobrichey.github.io/blob/master/assets/img/Bellinger_distribution)
 
-Now, let's look at Acuna (a medium upside player) and Ramirez (a low risk player). Here, we see two bimodal distributions. 
+Now, let's look at Acuna (a medium upside player) and Ramirez (a low risk player). Here, we see two bimodal distributions: Acuna with some upside (one system thinks he will be an MVP level player), and Ramirez with some downside. 
+
+![Acuna](https://github.com/jacobrichey/jacobrichey.github.io/blob/master/assets/img/Acuna_distribution)
+
+![Ramirez](https://github.com/jacobrichey/jacobrichey.github.io/blob/master/assets/img/Ramirez_distribution)
