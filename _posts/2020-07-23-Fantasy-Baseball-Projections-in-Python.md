@@ -7,8 +7,6 @@ gh-badge: [star]
 tags: [Python, baseball]
 ---
 
-*Note: Article is still being edited.*
-
 Well, the 2020 MLB Season has finally arrived, roughly four months after the previously scheduled start date. In advance of Opening Day tonight, I'm going to share my fantasy baseball player rankings, and the methodology behind the system. Note these rankings are designed for a snake draft (no auction values) in an ESPN Head-to-Head Categories league with a standard scoring system. These rankings are for fantasy baseball, and do not reflect overall player value. The general approach is to ensemble nine reputable projection systems to produce a consensus player ranking. The sample skewness for player projections is used to add potential boom/bust notes for players. All links to projections can be found in Jupyter Notebook write up of this project, located in the GitHub repository linked above.
 
 First, we'll need to import the necessary modules. 
