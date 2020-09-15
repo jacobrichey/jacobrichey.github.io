@@ -167,4 +167,6 @@ notes = pd.Series(np.select(conditions, values), index = proj_skew.index)
 
 For example, consider Cody Bellinger's stable projection. His Rating is unimodal and clustered around 10. We feel fairly comfortable concluding Bellinger will likely perform close to this mark. The blue line gives the average player rating, with the red line giving the median.
 
+![Bellinger](https://github.com/jacobrichey/jacobrichey.github.io/blob/master/assets/img/Acuna_distribution)
+
 Now, let's look at Acuna (a medium upside player) and Ramirez (a low risk player). Here, we see two bimodal distributions. 
