@@ -175,7 +175,7 @@ Now, let's look at Acuna (a medium upside player) and Ramirez (a low risk player
 
 ![Ramirez](https://github.com/jacobrichey/jacobrichey.github.io/blob/master/assets/img/Ramirez_distribution.png?raw=true)
 
-We'll import in some stats from 2019, specifically context neutral run value and xwOBA, and add them into the final sheet. See the GitHub repository for full code and necessary data. We'll also merge in player positions from ESPN, as well as their average draft pick. Finally, the summary stats will be re-computed for accuracy. And there we have it, our final sheet! 
+We'll import in some stats from 2019, specifically context neutral run value and xwOBA, and add them into the final sheet. See the GitHub repository for full code and necessary data. We'll also merge in player positions from ESPN, as well as their average draft pick. Finally, the summary stats will be re-computed for accuracy. 
 
 ```
 final_sheet = (all_players.groupby('playerid')
@@ -204,7 +204,7 @@ final_sheet = (all_players.groupby('playerid')
                         'PA', 'R', 'HR', 'RBI', 'SB', 'AVG', 
                         'K/9', 'IP', 'K', 'W', 'ERA', 'WHIP', 'SVHD', 'playerid']])
 ```
-  
+And there we have it, our final sheet!
 
 ## Rankings
 
