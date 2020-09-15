@@ -118,4 +118,53 @@ all_batters = (pd.concat([atc_batters, fgdc_batters, steamer_batters,
                .drop(['15149', '6885', '4220', '9077', '8048']))
 ```
 
-Similar download approach for pitchers. Difference here is we're looking for new set of statistics: ESPN standard scoring gives weight to K, W, ERA, WHIP, SV. My league happens to use SVHD as the fifth metric, but most projections don't account for holds. We'll use the same transformation we performed for batters missing hit 
+We'll take a similar download approach for pitchers. Difference here is we're looking for new set of statistics; the ESPN standard scoring gives weight to K, W, ERA, WHIP, SV. My league happens to use SVHD as the fifth metric, so although most projections don't account for holds, we'll denote this column as SVHD regardless, and understand the projections here aren't perfect. We'll use the same transformation we performed for batters missing H or PA entries, fillin in missing SVHD values with the mean of other projection systems for that player or 0 if there are no other projections. We'll also determine the position of pitchers (starter or reliever) based on the number of games started and innings pitched. This classification will then be used to rate starters and relievers differently, with less weight given to the naturally low ERA and WHIP of relievers.
+
+```
+all_pitchers = (pd.concat([atc_pitchers, fgdc_pitchers, steamer_pitchers, 
+                           thebat_pitchers, zips_pitchers,
+                           espn_pitchers[["IP", "H", "ER", "BB", "SO", "W", "ERA", "WHIP", "SV", "System"]],
+                           nf_pitchers[["IP", "H", "ER", "BB", "SO", "W", "ERA", "WHIP", "SV", "System"]],
+                           razzball_pitchers[["GS", "G", "IP", "H", "ER", "BB", "SO", "W", "ERA", "WHIP", "SV", "System"]]])
+                .rename(columns = {"SO": "K", "SV": "SVHD"})
+                .query('(ADP < 999 | ADP.isnull()) & (IP > 15)', engine = 'python')
+                .assign(SVHD = lambda df: df.SVHD.fillna(df.groupby('playerid')['SVHD'].transform('mean')).fillna(0),
+                        Position = lambda df: np.where((df.GS.isnull() & (df.IP > 30)) | (df.GS / df.G >= 0.5), 
+                                                       'SP', 'RP'),
+                        Rating = lambda df: np.where(df.Position == "SP", 
+                                                     zscore(df.K) + zscore(df.W) + zscore(df.SVHD) + zscore(-df.ERA) + zscore(-df.WHIP),
+                                                     zscore(df.K) + zscore(df.W) + zscore(df.SVHD) + 0.5*zscore(-df.ERA) + 0.5*zscore(-df.WHIP)))
+                .sort_values("Rating", ascending = False)
+                # drop Sale, Syndergaard, Severino, Price, Taillon, Archer, Vazquez, Leake, Ross, McHugh, Smith
+                .drop(['10603', '11762', '15890', '3184', '11674', '6345', '12076', '10130', '12972', '7531']))
+```
+
+Now, we'll add in the "bread and butter" of this projection system: the automated notes. Using the skew function from `scipy.stats`, we'll auto-assign players upside/risk grades, based on the distribution of their projections.
+
+```
+all_players = all_batters.merge(all_pitchers, how = "outer", on = ['playerid', 'ADP', 'System', 'Rating'])
+
+# using scipy.stats.skew, compute skewness of projection systems for individual players -> classify type of player accordingly
+proj_skew = all_players['Rating'].groupby('playerid').agg(skew, nan_policy = 'omit')
+
+conditions = [
+    (proj_skew < -2),
+    (proj_skew < -1.25),
+    (proj_skew < -0.5),
+    (proj_skew < 0),
+    (proj_skew == 0),
+    (proj_skew > 2),
+    (proj_skew > 1.25),
+    (proj_skew > 0.5),
+    (proj_skew > 0)
+]
+
+values = ['High Risk', 'Med Risk', 'Low Risk', 'Stable', 'Not Enough Data', 
+          'High Upside', 'Med Upside', 'Low Upside', 'Stable']
+
+notes = pd.Series(np.select(conditions, values), index = proj_skew.index)
+```
+
+For example, consider Cody Bellinger's stable projection. His Rating is unimodal and clustered around 10. We feel fairly comfortable concluding Bellinger will likely perform close to this mark. The blue line gives the average player rating, with the red line giving the median.
+
+Now, let's look at Acuna (a medium upside player) and Ramirez (a low risk player). Here, we see two bimodal distributions. 
