@@ -204,6 +204,7 @@ final_sheet = (all_players.groupby('playerid')
                         'PA', 'R', 'HR', 'RBI', 'SB', 'AVG', 
                         'K/9', 'IP', 'K', 'W', 'ERA', 'WHIP', 'SVHD', 'playerid']])
 ```
+- \\
 
 ## Rankings
 
