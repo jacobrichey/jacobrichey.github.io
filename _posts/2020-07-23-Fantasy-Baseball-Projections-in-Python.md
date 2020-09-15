@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import zscore, skew
 ```
 
-We'll now begin the ardous process of reading in the various hitter projections. We will want to be able to merge projection systems and historical performance statisticsw based on player id's over player names, to ensure accuracy. However, many sites have their own id conventions, so we will need a method to convert between id mappings. The Chadwick Register will be used to provide these conversions, with the extensive Steamer Projections providing official player naming conventions. 
+We'll now begin the ardous process of reading in the various hitter projections. We will want to be able to merge projection systems and historical performance statistics based on player id's over player names, to ensure accuracy. However, many sites have their own id conventions, so we will need a method to convert between id mappings. The Chadwick Register will be used to provide these conversions, with the extensive Steamer Projections providing official player naming conventions. 
 
 ```
 names = pd.concat([
