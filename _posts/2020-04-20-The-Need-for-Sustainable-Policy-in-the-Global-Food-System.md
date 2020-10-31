@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Need for Sustainable Policy in the Global Food System
-subtitle: Research Study, Conducted in Stockholm, Sweden
+subtitle: Research Study Conducted in Stockholm, Sweden
 tags: [sustainability]
 ---
 
