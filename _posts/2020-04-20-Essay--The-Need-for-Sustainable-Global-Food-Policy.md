@@ -45,6 +45,7 @@ Food waste marks an excellent example of an environmental topic widely accepted 
 | Primary Offenders | Developing economies (losses in transport and storage); High income economies (cultural and economic choices by consumers and producers) | Developed economies |
 | Reduction Opportunities | Investment in institutions and infrastructure to improve storage, transportation, processing, and marketing;Innovation to allow flexibility in food supply;Markets created for &quot;waste&quot; food;Sell-by dates increasing in accuracy;Landfill taxes | Sell-by dates increasing in accuracy;Encourage consumption of leftovers and non-perishable foods;Separation of waste and food waste (i.e. composting) |
 | Economic Relationship to Waste | Economies grow improved food chain systems + infrastructure falling pre-consumer waste;Economies grow high and narrowly defined product standards rising pre-consumer waste | Economies grow disposable income of consumers increases greater willingness to throw away food |
+
 &nbsp;
 
 ### DISCUSSION
