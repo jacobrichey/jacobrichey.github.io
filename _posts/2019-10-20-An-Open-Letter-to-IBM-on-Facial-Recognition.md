@@ -5,7 +5,6 @@ tags: [Essay, data ethics]
 ---
 
 ### Introduction
-
 In January 2019, IBM released a collection of nearly a million photos scraped from image hosting service Flickr to academic and corporate research groups. The photos were filtered from a Yahoo, then parent company of Flickr, publication in 2014 of 100 million images, and annotated with skin tone, estimated age and gender, and extensive facial features (Solon). There was immediate outcry and indignation of the public, despite the fact these photos were intended to be used to improve facial recognition software biases. Commercial face recognition algorithms severely underperform for minorities and women specifically, a problem seemingly rooted in the lack of data. Only 7.4% and 4.4%, respectively, of images in common benchmark datasets such as Adience and IJB-A are of dark-skinned women (Suresh). IBM attempted to combat this problem with the release and promote the improvement of recognition for underrepresented groups. However, it seemed the &quot;benevolence&quot; of IBM had been lost in the process, and the release was met with swift criticism. There are extensive problems with the publication of the photo collection, but I argue to you, none bigger than the promotion of facial recognition in its entirety.
 
 ### User Consent
