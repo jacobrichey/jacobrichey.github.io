@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Need for Global Sustainable Food Policy
+title: Essay: The Need for Sustainable Global Food Policy
 subtitle: Research Study Conducted in Stockholm, Sweden
 tags: [sustainability]
 ---
@@ -66,15 +66,15 @@ The purpose of this essay was to identify potential changes, likely to be embrac
 
 Dorward, L. J. (2012). Where are the best opportunities for reducing greenhouse gas emissions in the food system (including the food chain)? A comment. _Food Policy_, _37_(4), 463-466.
 
-Drewnowski, A. (2020). Analysing the affordability of the EAT-_Lancet_ diet. _Lancet Global Health_, _8_(1), 6-7.
+Drewnowski, A. (2020). Analysing the affordability of the EAT-*Lancet* diet. _Lancet Global Health_, _8_(1), 6-7.
 
 Geels, F. W., McMeekin, A., Mylan, J., &amp; Southerton, D. (2015). A critical appraisal of sustainable consumption and production research: The reformist, revolutionary and reconfiguration positions. _Global Environmental Change_, 34, 1-12.
 
-Hirvonen, K., Bai, Y., Headey, D., &amp; Masters, W. A. (2020). Affordability of the EAT-_Lancet_ reference diet: a global analysis. _Lancet Global Health_, _8_(1), 59-66.
+Hirvonen, K., Bai, Y., Headey, D., &amp; Masters, W. A. (2020). Affordability of the EAT-*Lancet* reference diet: a global analysis. _Lancet Global Health_, _8_(1), 59-66.
 
 Karlsson, J. O., &amp; Röös, E. (2019). Resource-efficient use of land and animals – Environmental impacts of food systems based on organic cropping and avoided food-feed competition. _Land Use Policy_, 85, 63-72.
 
-Knuppel, A., Papier, K., Key, T. J., &amp; Travis, R. C. (2019). Eat-_Lancet_ score and major health outcomes: the EPIC-Oxford study. _The Lancet_, _394_(10194), 213-214.
+Knuppel, A., Papier, K., Key, T. J., &amp; Travis, R. C. (2019). EAT-*Lancet* score and major health outcomes: the EPIC-Oxford study. _The Lancet_, _394_(10194), 213-214.
 
 Miranda-Ackermann, M. A., &amp; Azzaro-Pantel, C. (2017). Extending the scope of eco-labelling in the food industry to drive change beyond sustainable agriculture practices. _Journal of Environmental Management_, 204, 814-824.
 
@@ -84,7 +84,10 @@ Thaler, R. H., &amp; Sunstein, C. R. (2003). Libertarian Paternalism. _The Ameri
 
 Vermeulen, S. J., Campbell, B. M., &amp; Ingram, J. S. I. (2012). Climate Change and Food Systems. _Annual Review of Environment and Resources_, 37, 195-222.
 
-Wallén, A., Brandt, N., &amp; Wennersten, R. (2004). Does the Swedish consumer&#39;s choice of food influence greenhouse gas emissions? _Environmental Science and Policy_, _7_(6), 525-535.\
-Warde, A. (2017). Sustainable consumption: Practices, habits and politics. _Consumption: A Sociological Analysis_ (pp. 181-204). London: Palgrave Macmillan UK.\
-Willett, W., Rockström, J., Loken, B., Springmann, M., Lang, T., Vermeulen, S., … Murray, C. L. H. (2019). Food in the Anthropocene: the EAT-_Lancet_ Commission on healthy diets from sustainable food systems. _The Lancet_, _393_(10170), 447-492.\
-Zagmutt, F. J., Pouzou, J. G., &amp; Costard, S. (2019). The EAT-_Lancet_ Commission: a flawed approach? _The Lancet_, _394_(10204), 1140-1141.
+Wallén, A., Brandt, N., &amp; Wennersten, R. (2004). Does the Swedish consumer&#39;s choice of food influence greenhouse gas emissions? _Environmental Science and Policy_, _7_(6), 525-535.
+
+Warde, A. (2017). Sustainable consumption: Practices, habits and politics. _Consumption: A Sociological Analysis_ (pp. 181-204). London: Palgrave Macmillan UK.
+
+Willett, W., Rockström, J., Loken, B., Springmann, M., Lang, T., Vermeulen, S., … Murray, C. L. H. (2019). Food in the Anthropocene: the EAT-*Lancet* Commission on healthy diets from sustainable food systems. _The Lancet_, _393_(10170), 447-492.
+
+Zagmutt, F. J., Pouzou, J. G., &amp; Costard, S. (2019). The EAT-*Lancet* Commission: a flawed approach? _The Lancet_, _394_(10204), 1140-1141.
