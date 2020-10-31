@@ -1,8 +1,8 @@
 ---
 layout: post
-title: The Need for Sustainable Global Food Policy (Essay)
+title: The Need for Sustainable Global Food Policy
 subtitle: Research Study Conducted in Stockholm, Sweden
-tags: [sustainability]
+tags: [sustainability, essay]
 ---
 
 ### INTRODUCTION
