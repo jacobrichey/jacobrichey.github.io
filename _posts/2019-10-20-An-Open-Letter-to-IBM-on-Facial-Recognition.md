@@ -1,7 +1,6 @@
 ---
 layout: post
-title: The Need for Sustainable Global Food Policy
-subtitle: Research Study Conducted in Stockholm, Sweden
+title: An Open Letter to IBM on Facial Recognition
 tags: [Essay, data ethics]
 ---
 
