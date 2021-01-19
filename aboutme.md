@@ -12,6 +12,6 @@ I came into college with a passion for quantitative analysis across many discipl
 
 I find the statistics and entrepreneurship communities on Twitter particularly useful for short learnings and longer content references. Some of my favorite follows include @seanjtaylor, @david_perell, @daniela_witten, and @suhail. I also welcome you to check out my own [Twitter](https://twitter.com/Richey_Jacob) feed, where I post shorter projects without full write-ups, such as a [mathematical look at the Houston Astros sign stealing](https://twitter.com/Richey_Jacob/status/1262454513283166208), [galaxy-like visualizations of my sleep quality](https://twitter.com/Richey_Jacob/status/1196596855100104704), and a [comparison of crime density in San Francisco and Los Angeles from 2010-Present](https://twitter.com/Richey_Jacob/status/1189950161566330880). I also occasionally share quotes I like. One of my favorites is from Joel Grus’ data science textbook.
 
-> A little learning is a dangerous thing; Drink deep, or taste not the Pierian spring. - Alexander Pope
+> A little learning is a dangerous thing; Drink deep, or taste not the Pierian spring. - Alexander Pope.
 
 I look forward to exploring the Bay Area and tackling whatever new adventures life brings! Feel free to contact me through any of the methods listed at the footer of this webpage.
